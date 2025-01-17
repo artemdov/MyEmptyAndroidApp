@@ -23,3 +23,4 @@ rootProject.name = "My Application"
 include(":app")
 include(":p0031firstproject")
 include(":p180constraintLayoutintro")
+include(":p051layoutfiles")

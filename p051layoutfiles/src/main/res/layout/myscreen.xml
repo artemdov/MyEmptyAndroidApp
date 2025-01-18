@@ -11,10 +11,10 @@
         android:text="Вертикальная ориентация экрана"></TextView>
 
     <LinearLayout
-        android:background="@color/design_default_color_secondary_variant"
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/design_default_color_secondary_variant"
         android:orientation="vertical">
 
         <Button

@@ -1,20 +1,47 @@
 package com.example.p0091_onclickbuttons
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+import android.app.Activity
+import android.os.Bundle
+import android.view.View.OnClickListener
+import android.widget.Button
+import android.widget.TextView
+
+
+//Соответственно для реализации обработки событий необходимо выполнить следующие шаги:
+//- создаем обработчик
+//- заполняем метод onClick
+//- присваиваем обработчик кнопке
+
+class MainActivity : Activity() {
+    var tvOut: TextView? = null
+    var btnOk: Button? = null
+    var btnCancel: Button? = null
+
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+
+        // найдем View-элементы
+        tvOut = findViewById(R.id.tvOut)
+        btnOk = findViewById(R.id.btnOk)
+        btnCancel = findViewById(R.id.btnCancel)
+
+
+        // создаем обработчик нажатия
+        val oclBtnOk = OnClickListener { // Меняем текст в TextView (tvOut)
+            tvOut?.text = "Нажата кнопка ОК"
         }
+
+        val oclBtnCancel = OnClickListener { // Меняем текст в TextView (tvOut)
+            tvOut?.text = "Нажата кнопка CANCEL"
+        }
+
+        // присвоим обработчик кнопке Cancel (btnCancel)
+        btnCancel?.setOnClickListener(oclBtnCancel)
+        // присвоим обработчик кнопке OK (btnOk)
+        btnOk?.setOnClickListener(oclBtnOk)
     }
 }
+

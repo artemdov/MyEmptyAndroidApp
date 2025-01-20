@@ -14,6 +14,7 @@ class MainActivity : Activity(), OnClickListener {
     private lateinit var tvOut: TextView
     private lateinit var btnOk: Button
     private lateinit var btnCancel: Button
+    var btnOkText = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,9 @@ class MainActivity : Activity(), OnClickListener {
         // Установим Activity в качестве обработчика для кнопок
         btnOk.setOnClickListener(this)
         btnCancel.setOnClickListener(this)
+
+//Аналогия смены текста как и если в xml файле делать через android:text="@string/ok"
+        btnOk.setText(R.string.ok)
     }
 
     override fun onClick(v: View) {

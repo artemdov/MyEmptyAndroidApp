@@ -22,16 +22,17 @@
 
         <Button
             android:id="@+id/btnOk"
+            android:background="@color/llTopColor"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="OK" />
+             />
 
         <Button
             android:id="@+id/btnCancel"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Cancel" />
+            android:text="@string/cancel" />
     </LinearLayout>
 </LinearLayout>

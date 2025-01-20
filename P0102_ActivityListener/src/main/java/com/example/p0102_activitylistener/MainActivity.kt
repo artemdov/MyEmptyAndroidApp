@@ -2,11 +2,12 @@ package com.example.p0102_activitylistener
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.TextView
-
+import android.widget.Toast
 
 
 class MainActivity : Activity(), OnClickListener {
@@ -18,7 +19,7 @@ class MainActivity : Activity(), OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        Log.d(R.id.main.toString(), "###ggg")
         // Найдем View-элементы
         tvOut = findViewById(R.id.tvOut)
         btnOk = findViewById(R.id.btnOk)
@@ -33,9 +34,16 @@ class MainActivity : Activity(), OnClickListener {
     }
 
     override fun onClick(v: View) {
+        Log.d(v.id.toString(), "###QQQ")
         when (v.id) {
-            R.id.btnOk -> tvOut.text = "Нажата кнопка ОК"
-            R.id.btnCancel -> tvOut.text = "Нажата кнопка Cancel"
+            R.id.btnOk -> {
+                tvOut.text = "Нажата кнопка ОК"
+                Toast.makeText(this, "Нажата кнопка ОК", Toast.LENGTH_LONG).show()
+            }
+            R.id.btnCancel -> {
+                tvOut.text = "Нажата кнопка Cancel"
+                Toast.makeText(this, "Нажата кнопка Cancel", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

@@ -30,8 +30,12 @@ class MainActivity : AppCompatActivity() {
         tvColor = findViewById(R.id.tvColor)
         tvSize = findViewById(R.id.tvSize)
 
-        registerForContextMenu(tvColor);
-        registerForContextMenu(tvSize);
+//        registerForContextMenu(tvColor);
+//        registerForContextMenu(tvSize);
+//          ниже то же самое написано что и в комментах
+
+        tvColor?.setOnCreateContextMenuListener(this)
+        tvSize?.setOnCreateContextMenuListener(this)
     }
 
     override fun onCreateContextMenu(

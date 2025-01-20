@@ -34,7 +34,6 @@ class MainActivity : Activity(), OnClickListener {
     }
 
     override fun onClick(v: View) {
-        Log.d(v.id.toString(), "###QQQ")
         when (v.id) {
             R.id.btnOk -> {
                 tvOut.text = "Нажата кнопка ОК"

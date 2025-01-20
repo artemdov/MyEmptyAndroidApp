@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         textView1.text = "Neew text"
 
-        val Button = findViewById<Button>(R.id.button4)
+        val button = findViewById<Button>(R.id.button4)
 
-        Button.text = "New button"
+        button.text = "New button"
 
-        Button.isEnabled = false
+        button.isEnabled = false
     }
 }

@@ -14,7 +14,6 @@ class MainActivity : Activity(), OnClickListener {
     private lateinit var tvOut: TextView
     private lateinit var btnOk: Button
     private lateinit var btnCancel: Button
-    var btnOkText = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

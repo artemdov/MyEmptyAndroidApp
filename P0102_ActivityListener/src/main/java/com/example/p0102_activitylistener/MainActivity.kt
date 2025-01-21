@@ -19,7 +19,6 @@ class MainActivity : Activity(), OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d(R.id.main.toString(), "###ggg")
         // Найдем View-элементы
         tvOut = findViewById(R.id.tvOut)
         btnOk = findViewById(R.id.btnOk)

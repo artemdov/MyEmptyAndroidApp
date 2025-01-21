@@ -10,6 +10,7 @@ import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -87,6 +88,13 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             }
 
             R.id.btnDiv -> {
+                when (num2) {
+                    0f -> {
+                        Toast.makeText(this, "! На ноль делить нельзя", Toast.LENGTH_SHORT).show()
+
+                        return
+                    }
+                }
                 oper = "/"
                 result = num1 / num2
             }
@@ -116,6 +124,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 tvResult?.text = ""
                 return true
             }
+
             MENU_QUIT_ID -> {
                 finish()
                 return true

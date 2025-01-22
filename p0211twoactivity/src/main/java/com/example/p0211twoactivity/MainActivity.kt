@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     override fun onClick(v: View) {
-        var intent: Intent? = null
+        val intent: Intent
 
         when (v.id) {
             R.id.btnActTwo -> {

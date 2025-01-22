@@ -23,9 +23,9 @@ class AlignActivity : Activity(), OnClickListener {
         btnCenter = findViewById<View>(R.id.btnCenter) as Button
         btnRight = findViewById<View>(R.id.btnRight) as Button
 
-        btnLeft!!.setOnClickListener(this)
-        btnCenter!!.setOnClickListener(this)
-        btnRight!!.setOnClickListener(this)
+        btnLeft?.setOnClickListener(this)
+        btnCenter?.setOnClickListener(this)
+        btnRight?.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

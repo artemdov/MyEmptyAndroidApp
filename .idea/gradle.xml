@@ -10,7 +10,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/LayoutInflater" />
             <option value="$PROJECT_DIR$/P0091_OnClickButtons" />
             <option value="$PROJECT_DIR$/P0101_Listener" />
             <option value="$PROJECT_DIR$/P0102_ActivityListener" />
@@ -36,6 +35,8 @@
             <option value="$PROJECT_DIR$/P0371_SQLiteInnerJoin" />
             <option value="$PROJECT_DIR$/P0381_SQLiteTransaction" />
             <option value="$PROJECT_DIR$/P0391_SQLiteOnUpgradeDB" />
+            <option value="$PROJECT_DIR$/P0401_LayoutInflaterNew" />
+            <option value="$PROJECT_DIR$/P0411_LayoutInflaterList" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/p0031firstproject" />
             <option value="$PROJECT_DIR$/p0211twoactivity" />

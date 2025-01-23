@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LayoutInflater" />
+            <option value="$PROJECT_DIR$/P0091_OnClickButtons" />
+            <option value="$PROJECT_DIR$/P0101_Listener" />
+            <option value="$PROJECT_DIR$/P0102_ActivityListener" />
+            <option value="$PROJECT_DIR$/P0131_MenuSimple" />
+            <option value="$PROJECT_DIR$/P0141_MenuAdv" />
+            <option value="$PROJECT_DIR$/P0151_ContextMenu" />
+            <option value="$PROJECT_DIR$/P0161_DynamicLayout" />
+            <option value="$PROJECT_DIR$/P0171_DynamicLayout2" />
+            <option value="$PROJECT_DIR$/P0181_DynamicLayout3" />
+            <option value="$PROJECT_DIR$/P0191_SimpleCalculator" />
+            <option value="$PROJECT_DIR$/P0201_SimpleAnimation" />
+            <option value="$PROJECT_DIR$/P0231_OneActivityState" />
+            <option value="$PROJECT_DIR$/P0261_IntentFilter" />
+            <option value="$PROJECT_DIR$/P0271_GetIntentAction" />
+            <option value="$PROJECT_DIR$/P0281_IntentExtras" />
+            <option value="$PROJECT_DIR$/P0291_SimpleActivityResult" />
+            <option value="$PROJECT_DIR$/P0301_ActivityResult" />
+            <option value="$PROJECT_DIR$/P0311_SimpleIntents" />
+            <option value="$PROJECT_DIR$/P0321_SimpleBrowser" />
+            <option value="$PROJECT_DIR$/P0331_SharedPreferences" />
+            <option value="$PROJECT_DIR$/P0341_SimpleSQLite" />
+            <option value="$PROJECT_DIR$/P0361_SQLiteQuery" />
+            <option value="$PROJECT_DIR$/P0371_SQLiteInnerJoin" />
+            <option value="$PROJECT_DIR$/P0381_SQLiteTransaction" />
+            <option value="$PROJECT_DIR$/P0391_SQLiteOnUpgradeDB" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/p0031firstproject" />
+            <option value="$PROJECT_DIR$/p0211twoactivity" />
+            <option value="$PROJECT_DIR$/p051layoutfiles" />
+            <option value="$PROJECT_DIR$/p180constraintLayoutintro" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

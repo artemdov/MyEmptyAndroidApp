@@ -20,6 +20,9 @@ class MainActivity : Activity(), View.OnClickListener {
     var btnClear: Button? = null
     var etName: EditText? = null
     var etEmail: EditText? = null
+    var btnUpd: Button? = null
+    var btnDel: Button? = null
+    var etId: EditText? = null
 
     var dbHelper: DBHelper? = null
 
@@ -37,8 +40,15 @@ class MainActivity : Activity(), View.OnClickListener {
         btnClear = findViewById<View>(R.id.btnClear) as Button
         btnClear!!.setOnClickListener(this)
 
+        btnUpd = findViewById<View>(R.id.btnUpd) as Button
+        btnUpd!!.setOnClickListener(this)
+
+        btnDel = findViewById<View>(R.id.btnDel) as Button
+        btnDel!!.setOnClickListener(this)
+
         etName = findViewById<View>(R.id.etName) as EditText
         etEmail = findViewById<View>(R.id.etEmail) as EditText
+        etId = findViewById<View>(R.id.etID) as EditText
 
 
         // создаем объект для создания и управления версиями БД
@@ -54,7 +64,7 @@ class MainActivity : Activity(), View.OnClickListener {
         // получаем данные из полей ввода
         val name = etName!!.text.toString()
         val email = etEmail!!.text.toString()
-
+        val id = etId!!.text.toString()
 
         // подключаемся к БД
         val db = dbHelper!!.writableDatabase
@@ -107,6 +117,27 @@ class MainActivity : Activity(), View.OnClickListener {
                 // удаляем все записи
                 val clearCount = db.delete("mytable", null, null)
                 Log.d(LOG_TAG, "deleted rows count = $clearCount")
+            }
+
+            R.id.btnUpd -> {
+                if (id.equals("", ignoreCase = true)) return
+
+                Log.d(LOG_TAG, "--- Update mytable: ---")
+                // подготовим значения для обновления
+                cv.put("name", name);
+                cv.put("email", email);
+                val updCount = db.update("mytable", cv, "id = ?", arrayOf(id))
+                Log.d(LOG_TAG, "updated rows count = $updCount")
+            }
+
+            R.id.btnDel -> {
+                if (id.equals("", ignoreCase = true)) return
+
+                Log.d(LOG_TAG, "--- Delete from mytable: ---")
+
+                // удаляем по id
+                val delCount = db.delete("mytable", "id = ?", arrayOf(id))
+                Log.d(LOG_TAG, "deleted rows count = " + delCount)
             }
         }
         // закрываем подключение к БД

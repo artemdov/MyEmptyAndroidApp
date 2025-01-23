@@ -24,6 +24,15 @@ class MainActivity : Activity() {
         dbh = DBHelper(this)
         myActions()
     }
+//форма использования транзакций
+//    db.beginTransaction();
+//    try {
+//        ...
+//        db.setTransactionSuccessful();
+//    } finally {
+//        db.endTransaction();
+//    }
+
 
     fun myActions() {
         db = dbh!!.writableDatabase

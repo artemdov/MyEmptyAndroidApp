@@ -1,6 +1,5 @@
 package com.example.recyclerviewhard
 
-import android.util.Log
 import com.github.javafaker.Faker
 
 data class Person(

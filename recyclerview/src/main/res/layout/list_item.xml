@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/design_default_color_surface">
+
+    <TextView
+        android:id="@+id/fullname_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="90dp"
+        android:text="Hello World!"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/group_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullname_txt"
+        android:layout_marginStart="14dp"
+        android:textColor="@color/white"
+        android:paddingBottom="15dp"
+        android:text="8 class"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/skills_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_marginEnd="15dp"
+        android:text="skills: 6"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/group_txt"
+        android:background="@color/design_default_color_secondary_variant" />
+</RelativeLayout>

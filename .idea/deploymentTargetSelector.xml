@@ -104,6 +104,9 @@
       <SelectionState runConfigName="P0411_LayoutInflaterList">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="recyclerview">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

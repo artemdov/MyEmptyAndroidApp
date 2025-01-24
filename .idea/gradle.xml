@@ -42,6 +42,7 @@
             <option value="$PROJECT_DIR$/p0211twoactivity" />
             <option value="$PROJECT_DIR$/p051layoutfiles" />
             <option value="$PROJECT_DIR$/p180constraintLayoutintro" />
+            <option value="$PROJECT_DIR$/recyclerview" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

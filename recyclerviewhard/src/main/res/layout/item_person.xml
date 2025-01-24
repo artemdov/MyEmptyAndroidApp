@@ -6,20 +6,23 @@
     android:layout_height="wrap_content"
     android:background="?selectableItemBackground"
     android:paddingStart="10dp"
-    android:paddingTop="5dp"
+    android:paddingTop="50dp"
     android:paddingEnd="10dp"
-    android:paddingBottom="5dp">
+    android:paddingBottom="25dp">
 
     <ImageView
+        android:text="nameTextView1"
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_launcher_background"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:text="nameTextView1"
         android:id="@+id/nameTextView1"
         style="@style/TextAppearance.AppCompat.Body2"
         android:layout_width="wrap_content"
@@ -29,6 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:text="companyTextView1"
         android:id="@+id/companyTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,20 +41,24 @@
         app:layout_constraintTop_toBottomOf="@id/nameTextView1" />
 
     <ImageView
+        android:text="likedImageView"
         android:id="@+id/likedImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/is_like"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/more1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/more1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:width="10dp"
+        android:height="220dp"
+        android:src="@drawable/three_dots"
+        android:text="more1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

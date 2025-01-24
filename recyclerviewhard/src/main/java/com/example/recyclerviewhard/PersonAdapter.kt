@@ -2,6 +2,7 @@ package com.example.recyclerviewhard
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,12 +39,13 @@ class PersonAdapter(
     }
 
     override fun getItemCount(): Int {
-       return data.size
+        return data.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val person = data[position]
-
+        //Log.d("myLOOOGS", holder.imageView1.toString())
+        Log.d("myLOOOGSPERS", person.toString())
         val color =
             if (person.isLiked) R.color.red else R.color.gray // Цвет "сердца", если пользователь был лайкнут
 
@@ -55,7 +57,7 @@ class PersonAdapter(
         )
         Glide.with(context).load(person.photo)
             .circleCrop() // Отрисовка фотографии пользователя с помощью библиотеки Glide
-            .error(R.drawable.ic_launcher_background)
+            .placeholder(androidx.constraintlayout.widget.R.drawable.notification_tile_bg)
             .into(holder.imageView1)
     }
 

@@ -12,13 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
     private var recView: RecyclerView? = null
     private lateinit var studentAdapter: StudentAdapter
-    private lateinit var students: ArrayList<Student>
+    private var students: ArrayList<Student> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        students = ArrayList()
         initializeData()
         recView = findViewById(R.id.recView)
         studentAdapter = StudentAdapter(this, students)

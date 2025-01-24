@@ -11,17 +11,18 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class PersonAdapter(private var context: Context) :
-    RecyclerView.Adapter<PersonAdapter.MyViewHolder>() {
+class PersonAdapter(
+    private val context: Context,
+    private var data: List<Person>, // Передаем сюда список данных
+) : RecyclerView.Adapter<PersonAdapter.MyViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
-    private var data: List<Person> = emptyList()
-        @SuppressLint("NotifyDataSetChanged")
-        set(newValue) {
-            field = newValue
-            notifyDataSetChanged()
-        }
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(newData: List<Person>) { // Метод для обновления данных в адаптере
+        data = newData
+        notifyDataSetChanged()
+    }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView1: ImageView = itemView.findViewById(R.id.imageView1)
@@ -46,8 +47,8 @@ class PersonAdapter(private var context: Context) :
         val color =
             if (person.isLiked) R.color.red else R.color.gray // Цвет "сердца", если пользователь был лайкнут
 
-        holder.nameTextView1 = person.name as TextView
-        holder.companyTextView1 = person.companyName as TextView // Отрисовка компании пользователя
+        holder.nameTextView1.text = person.name // Отрисовка имени пользователя
+        holder.companyTextView1.text = person.companyName // Отрисовка компании пользователя
         holder.likedImageView.setColorFilter( // Отрисовка цвета "сердца"
             ContextCompat.getColor(context, color),
             android.graphics.PorterDuff.Mode.SRC_IN

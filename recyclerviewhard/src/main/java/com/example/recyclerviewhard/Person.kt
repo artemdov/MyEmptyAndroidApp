@@ -28,6 +28,8 @@ class PersonService {
         }.toMutableList()
     }
 
+    fun getPersons(): List<Person> = persons
+
 
     companion object {
         private val IMAGES = mutableListOf(

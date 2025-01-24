@@ -4,14 +4,11 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     private var recView: RecyclerView? = null
-    private lateinit var studentAdapter: StudentAdapter
     private var students: ArrayList<Student> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initializeData()
         recView = findViewById(R.id.recView)
-        studentAdapter = StudentAdapter(this, students)
         recView?.layoutManager = LinearLayoutManager(this)
-        recView?.adapter = studentAdapter
+        recView?.adapter = StudentAdapter(this, students)
     }
 
     private fun initializeData() {

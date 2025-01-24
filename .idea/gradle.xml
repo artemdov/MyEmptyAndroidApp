@@ -43,6 +43,7 @@
             <option value="$PROJECT_DIR$/p051layoutfiles" />
             <option value="$PROJECT_DIR$/p180constraintLayoutintro" />
             <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/recyclerviewhard" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

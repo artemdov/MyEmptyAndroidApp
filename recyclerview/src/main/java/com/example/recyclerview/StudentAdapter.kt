@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 
-class StudentAdapter(private var context: Context, var studentList: List<Student>) :
+class StudentAdapter(private var context: Context, private var studentList: List<Student>) :
     RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
 
 

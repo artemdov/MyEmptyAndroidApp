@@ -71,21 +71,3 @@ class StudentAdapter(private var context: Context, private var studentList: List
         return studentList.size
     }
 }
-
-
-//data class StudentAdapterData(val context: Context, val studentList: List<Student>)
-//
-//fun createStudentAdapter(data: StudentAdapterData): RecyclerView.Adapter<ViewHolder> {
-//    val inflater = LayoutInflater.from(data.context)
-//
-//    return object : RecyclerView.Adapter<ViewHolder>() {
-//        override fun getItemCount(): Int {
-//            return data.studentList.size
-//        }
-//
-//        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//            val student = data.studentList[position]
-//            // Привязка данных к ViewHolder
-//        }
-//    }
-//}

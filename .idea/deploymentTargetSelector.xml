@@ -110,6 +110,9 @@
       <SelectionState runConfigName="recyclerviewhard">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="less7_save_activity_state_with_livedata">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

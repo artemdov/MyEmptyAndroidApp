@@ -32,8 +32,9 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
 runtime = { module = "android.arch.lifecycle:runtime", version.ref = "runtime" }
-
+room-compiler = { module = "androidx.room:room-compiler", version = "2.5.0" }
+room-runtime = { module = "androidx.room:room-runtime", version = "2.5.0" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.13" } # Плагин KSP

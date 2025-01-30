@@ -12,7 +12,11 @@ object UserData {
         User("Sarra", "876543"),
         User("Klava", "878"),
         User("Sonia", "2j897n3n3j"),
-        User("Kate", "987879")
+        User("Kate", "987879"),
+        User("Sonia2", "2j897n3n3j"),
+        User("Kate2", "987879"),
+        User("Sonia3", "2j897n3n3j"),
+        User("Kate4", "987879")
     )
 
 }

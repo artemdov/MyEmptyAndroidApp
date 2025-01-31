@@ -1,4 +1,4 @@
-package com.example.less_8_data_binding
+package com.example.less_8_data_binding.data
 
 
 import androidx.lifecycle.LiveData

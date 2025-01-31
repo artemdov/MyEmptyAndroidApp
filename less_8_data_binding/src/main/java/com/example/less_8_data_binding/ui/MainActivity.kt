@@ -1,10 +1,12 @@
-package com.example.less_8_data_binding
+package com.example.less_8_data_binding.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.less_8_data_binding.R
+import com.example.less_8_data_binding.data.SimpleViewModel
 import com.example.less_8_data_binding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="com.example.less_8_data_binding.SimpleViewModel" />
+            type="com.example.less_8_data_binding.data.SimpleViewModel" />
 
         <!--        <variable-->
         <!--            name="name"-->

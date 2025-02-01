@@ -13,7 +13,6 @@ import com.example.less_8_data_binding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val viewModel by lazy { ViewModelProvider(this)[SimpleViewModel::class.java] }
-    private var defaultProgressBarColor: ColorStateList? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

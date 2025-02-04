@@ -21,11 +21,12 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private var dataTextView: TextView? = null
     private var editTextView: EditText? = null
 
-    private val userRepository = UserRepositoryImpl()
+    //LazyThreadSafetyMode.NONE подключаем чтобы не было многопоточности
+    private val userRepository by lazy(LazyThreadSafetyMode.NONE) { UserRepositoryImpl(context = applicationContext) }
 
     //подключаем юскейсы к активити
-    private val saveUserNameUseCase = SaveUserNameUseCase(userRepository = userRepository)
-    private val getUserNameUseCase = GetUserNameUseCase(userRepository = userRepository)
+    private val saveUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) { SaveUserNameUseCase(userRepository = userRepository) }
+    private val getUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) { GetUserNameUseCase(userRepository = userRepository) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,8 +49,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         when (v.id) {
             R.id.button -> {
                 Log.d("##$$", "###")
-               val userName = getUserNameUseCase.execute()
-                    dataTextView?.text = "${userName.firstName} ${userName.lastName}"
+                val userName = getUserNameUseCase.execute()
+                dataTextView?.text = "${userName.firstName} ${userName.lastName}"
 
             }
 

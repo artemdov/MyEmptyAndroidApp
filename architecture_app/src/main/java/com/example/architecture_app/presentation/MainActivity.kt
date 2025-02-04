@@ -24,9 +24,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     //LazyThreadSafetyMode.NONE подключаем чтобы не было многопоточности
     private val userRepository by lazy(LazyThreadSafetyMode.NONE) {
-        UserRepositoryImpl(
-            SharedPrefUserStorage(context = applicationContext)
-        )
+        UserRepositoryImpl(userStorage = SharedPrefUserStorage(context = applicationContext))
     }
 
     //подключаем юскейсы к активити

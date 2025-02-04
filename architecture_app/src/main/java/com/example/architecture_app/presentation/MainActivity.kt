@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.architecture_app.R
 import com.example.architecture_app.data.repository.UserRepositoryImpl
+import com.example.architecture_app.data.storage.sharedRefs.SharedPrefUserStorage
 import com.example.architecture_app.domain.models.SaveUserNameParam
 import com.example.architecture_app.domain.usecase.GetUserNameUseCase
 import com.example.architecture_app.domain.usecase.SaveUserNameUseCase
@@ -22,11 +23,23 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private var editTextView: EditText? = null
 
     //LazyThreadSafetyMode.NONE подключаем чтобы не было многопоточности
-    private val userRepository by lazy(LazyThreadSafetyMode.NONE) { UserRepositoryImpl(context = applicationContext) }
+    private val userRepository by lazy(LazyThreadSafetyMode.NONE) {
+        UserRepositoryImpl(
+            SharedPrefUserStorage(context = applicationContext)
+        )
+    }
 
     //подключаем юскейсы к активити
-    private val saveUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) { SaveUserNameUseCase(userRepository = userRepository) }
-    private val getUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) { GetUserNameUseCase(userRepository = userRepository) }
+    private val saveUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) {
+        SaveUserNameUseCase(
+            userRepository = userRepository
+        )
+    }
+    private val getUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) {
+        GetUserNameUseCase(
+            userRepository = userRepository
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

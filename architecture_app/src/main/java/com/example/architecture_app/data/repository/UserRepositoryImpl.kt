@@ -1,38 +1,52 @@
 package com.example.architecture_app.data.repository
 
-import android.content.Context
-import android.util.Log
+import com.example.architecture_app.data.storage.sharedRefs.SharedPrefUserStorage
+import com.example.architecture_app.data.storage.models.User
 import com.example.architecture_app.domain.models.SaveUserNameParam
 import com.example.architecture_app.domain.models.UserName
 import com.example.architecture_app.domain.repository.UserRepository
 
 //здесь не должно быть логики и происходит сохранение и получение данных
+//только данные храняться в слое storage так как здесь в слое repository
+//также можно делать запросы на сервер и тд
+//для примера ниже закоменченный код с запросами
+//то есть получается repository является как связующее звено которое соединяет все вместе
 
-//енамы лучше выносить вне, сейчас это так для наглядности
-private const val SHARED_PREFS_NAME = "shared_prefs_name"
-private const val KEY_FIRST_NAME = "firstName"
-private const val KEY_LAST_NAME = "lastName"
-private const val KEY_DEFAULT_NAME = "defaultName"
-
-class UserRepositoryImpl(context: Context) : UserRepository {
-    private val sharedPreferences =
-        context.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+class UserRepositoryImpl(private val userStorage: SharedPrefUserStorage) : UserRepository {
 
     override fun saveName(saveParam: SaveUserNameParam): Boolean {
-        sharedPreferences.edit().putString(KEY_FIRST_NAME, saveParam.name).apply()
-        Log.d(
-            "##Nmae",
-            sharedPreferences.edit().putString(KEY_FIRST_NAME, saveParam.name).apply().toString()
-        )
+        val user = mapToStorage(saveParam)
 
-        return saveParam.name.isNotEmpty()
+        return userStorage.save(user)
     }
 
     override fun getName(): UserName {
-        val firstName = sharedPreferences.getString(KEY_FIRST_NAME, "")?: ""
-        val lastName = sharedPreferences.getString(KEY_LAST_NAME, KEY_DEFAULT_NAME)?: KEY_DEFAULT_NAME
-        val result = UserName(firstName = firstName, lastName = lastName)
+        val user = userStorage.get()
 
-        return result
+        return mapToDomain(user)
+    }
+
+    //напишем мапперы для связывания моделей
+    private fun mapToStorage(saveParam: SaveUserNameParam): User {
+        return User(firstName = saveParam.name, lastName = "")
+    }
+
+    private fun mapToDomain(user: User): UserName {
+        return UserName(firstName = user.firstName, lastName = user.lastName)
     }
 }
+//class UserRepositoryImpl(
+//    private val userStorage: SharedPrefUserStorage,
+//    private val networkApi: NetworkApi,
+//) : UserRepository {
+//
+//    override fun saveName(saveParam: SaveUserNameParam): Boolean {
+//        networkApi.saveDataOnServer
+//        return userStorage.save(saveParam)
+//    }
+//
+//    override fun getName(): UserName {
+//        networkApi.getDataFromServer
+//        return userStorage.get()
+//    }
+//}

@@ -1,5 +1,7 @@
 [versions]
 agp = "8.7.3"
+dagger = "2.28.3"
+daggerCompiler = "2.x"
 glideVersion = "4.12.0"
 javafaker = "1.0.2"
 kotlin = "1.9.24"
@@ -19,6 +21,8 @@ runtime = "1.1.1"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glideVersion" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
 javafaker = { module = "com.github.javafaker:javafaker", version.ref = "javafaker" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -38,3 +42,4 @@ room-runtime = { module = "androidx.room:room-runtime", version = "2.5.0" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.13" } # Плагин KSP
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt"}

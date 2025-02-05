@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -41,6 +42,8 @@ android {
 }
 
 dependencies {
+    implementation (libs.dagger)
+    kapt(libs.dagger.compiler)
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)
     implementation(libs.runtime)

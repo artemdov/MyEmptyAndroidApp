@@ -34,9 +34,17 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    kapt {
+        correctErrorTypes = true // Помогает обработке некоторых типов ошибок
+        useBuildCache = true // Включает кеширование для ускорения сборки
+    }
 }
 
 dependencies {
+    implementation (libs.dagger)
+    kapt (libs.dagger.compiler)
+    implementation (libs.javax.inject)
     implementation (libs.dagger)
     kapt(libs.dagger.compiler)
     implementation(libs.androidx.core.ktx)

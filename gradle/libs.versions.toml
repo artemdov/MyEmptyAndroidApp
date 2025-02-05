@@ -1,9 +1,10 @@
 [versions]
 agp = "8.7.3"
-dagger = "2.28.3"
-daggerCompiler = "2.28.3"
+dagger = "2.44"
+daggerCompiler = "2.44"
 glideVersion = "4.12.0"
 javafaker = "1.0.2"
+javaxInject = "1"
 kotlin = "1.9.24"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -25,6 +26,7 @@ dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
 javafaker = { module = "com.github.javafaker:javafaker", version.ref = "javafaker" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
+javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

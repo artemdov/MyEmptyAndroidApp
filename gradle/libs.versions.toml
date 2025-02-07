@@ -1,7 +1,7 @@
 [versions]
 agp = "8.7.3"
-dagger = "2.44"
-daggerCompiler = "2.44"
+dagger = "2.55"
+daggerCompiler = "2.55"
 glideVersion = "4.12.0"
 javafaker = "1.0.2"
 javaxInject = "1"

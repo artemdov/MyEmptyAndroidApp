@@ -2,6 +2,7 @@ package com.example.architecture_app_added_dagger.app
 
 import android.app.Application
 import com.example.architecture_app_added_dagger.di.AppComponent
+import com.example.architecture_app_added_dagger.di.AppModule
 import com.example.architecture_app_added_dagger.di.DaggerAppComponent
 
 class App : Application() {
@@ -12,8 +13,7 @@ class App : Application() {
         super.onCreate()
 
         appComponent = DaggerAppComponent
-            .builder()
-            .context(this)
-            .build()
+            .builder().appModule(AppModule(context = this)).build()
+
     }
 }

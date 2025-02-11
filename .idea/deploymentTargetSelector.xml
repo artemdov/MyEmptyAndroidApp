@@ -131,6 +131,9 @@
       <SelectionState runConfigName="architecture_app_added_dagger">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="coroutines">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
